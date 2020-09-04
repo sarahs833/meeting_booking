@@ -1,0 +1,15 @@
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+      <h1 class="display-4">Hi <%=current_user.username%></h1>
+    <% if current_user.image.present? %>
+      <%= image_tag current_user.image %>
+    <% else %>
+      <p class="lead">Remember to upload your picture</p>
+    <%end%>
+      <p class="lead">Your current email address is <%=current_user.email%></p>
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+        Update my info
+      </button>
+  </div>
+</div>
