@@ -1,0 +1,13 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4">Hello Meetings!</h1>
+  <p class="lead">We provide a clear board with all the schedule meetings and the member involve into the meeting.</p>
+  <hr class="my-4">
+  <p>Test it out and leave us your comments!.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Create meeting!</a>
+</div>
+
+<div class="container">
+  <%= month_calendar(attribute: :starts_at) do |date| %>
+    <%= date %>
+  <% end %>
+</div>
