@@ -1,15 +1,22 @@
-
-<div class="jumbotron jumbotron-fluid text-center">
-  <div class="container">
-      <h1 class="display-4">Hi <%=current_user.username%></h1>
-    <% if current_user.image.present? %>
-      <%= image_tag current_user.image %>
-    <% else %>
-      <p class="lead">Remember to upload your picture</p>
-    <%end%>
-      <p class="lead">Your current email address is <%=current_user.email%></p>
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
-        Update my info
-      </button>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="jumbotron jumbotron-fluid text-center bgc">
+        <div class="container">
+            <h1 class="display-4">Hi <%=current_user.username%></h1>
+          <% if current_user.image.present? %>
+            <%= image_tag current_user.image,style:'width:100px' %>
+          <% else %>
+            <p class="lead">Hi <%=current_user.username %> your picture is not uploaded yet. Don't forget to upload it</p>
+          <%end%>
+            <p class="lead">Your current email address is <%=current_user.email%></p>
+            <%=button_to "Update info", edit_user_path, class:"btn btn-light",method: :get,remote:true %>
+            <div class='form mt-5'>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 background-image">
+    </div>
   </div>
 </div>

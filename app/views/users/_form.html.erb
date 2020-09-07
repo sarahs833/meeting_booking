@@ -1,0 +1,11 @@
+<div class="p-5">
+  <%= simple_form_for @user do |f| %>
+    <%= render 'shared/errors', object: f.object %>
+    <%= f.input :username,:input_html => {class:'form-control'} %>
+    <%= f.input :email,:input_html => {class:'form-control'} %>
+    <%= f.input :image, as: :file %>
+      <br>
+    <%= f.submit "submit", class: "btn btn-dark" %>
+  <% end %>
+  </div>
+</div>

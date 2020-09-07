@@ -5,6 +5,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "simple_calendar";
 
+$latte_brown: #dfd3c3;
+
 @media (max-width: 992px) {
 
   }
@@ -13,6 +15,23 @@
 }
 @media (max-width: 576px) {
 
+}
+
+
+.background-image {
+  background-image: url('schedule.jpg');
+  object-fit: contain;
+  background-size: cover;
+  height: 100vh;
+}
+
+.bgc {
+  background-color:$latte_brown;
+  color:white
+}
+
+.form {
+  border:solid white;
 }
 
 
