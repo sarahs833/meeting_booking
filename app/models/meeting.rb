@@ -1,7 +1,6 @@
 class Meeting < ApplicationRecord
-  belongs_to :user
+  belongs_to :creator, foreign_key: 'user_id', class_name: :User
   has_many :members
-  has_many :users, through: :members
 
   validates :start_time, :end_time, :presence => true
   validate :start_time_can_not_be_in_the_past

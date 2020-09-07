@@ -22,8 +22,9 @@ class UsersController < ApplicationController
       flash[:alert] = 'something went wrong'
       render action:edit
     end
-
   end
+
+
 
   private
 

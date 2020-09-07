@@ -22,16 +22,17 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <%if current_user %>
-            <%= link_to "Log out", destroy_user_session_path, class:"dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete,class:"dropdown-item" %>
           <%else%>
             <%= link_to "Log in", new_user_session_path, class:'dropdown-item' %>
           <%end %>
+          <%= link_to 'Sign up',new_user_registration_path, class:'dropdown-item' %>
         </div>
       </li>
     </ul>
 
     <div class="nav-item dropdown">
-      <% if current_user %>
+      <% if current_user && current_user.image.present?%>
         <%= image_tag current_user.image, class:"vatar dropdown-toggle",style:"width:50px", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       <%else%>
         <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle",style:"width:50px", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
