@@ -12,7 +12,8 @@
 
   <% meetings.each do |meeting| %>
     <div>
-      <%= meeting.name %>
+      <%=link_to meeting.name, meeting_path(meeting.id) %>
+      <p>from <%=meeting.start_date_format%> till <%=meeting.end_date_format%></p>
     </div>
   <% end %>
 <% end %>
