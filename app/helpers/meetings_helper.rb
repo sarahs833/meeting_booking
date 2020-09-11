@@ -9,7 +9,7 @@ module MeetingsHelper
 
   def meeting_tag(meeting)
     if meeting.creator == current_user
-      "you have created this meeting"
+      "you created this meeting"
     elsif meeting.users.include?(current_user)
       "you have been tag to participate to the meeting"
     else
