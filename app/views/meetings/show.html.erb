@@ -17,7 +17,10 @@
 
 <p><%=meeting_participants(@meeting)%>
 
-<%=render partial:'shared/user' %>
 
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>
+
+<% if current_user.id == @meeting.creator.id %>
+  <%=render partial:'shared/user' %>
+<%end%>
