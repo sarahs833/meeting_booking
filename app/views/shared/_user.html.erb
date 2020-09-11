@@ -1,4 +1,6 @@
-<% form_with @meeting ,method: :patch do |f| %>
-  <%= f.collection_check_boxes :user_ids, User.all, :id, :user_name %>
-   <%= f.submit %>
-<% end %>
+<div class="container-fluid">
+  <%=form_for @meeting ,method: :patch do |f| %>
+    <%= f.collection_check_boxes :user_ids, User.not_include_self(current_user), :id, :username %>
+     <%= f.submit %>
+  <% end %>
+</div>

@@ -15,7 +15,7 @@
   <%= @meeting.end_time %>
 </p>
 
-<%=render 'shared/user' %>
+<%=render partial:'shared/user' %>
 
 <%= link_to 'Edit', edit_meeting_path(@meeting) %> |
 <%= link_to 'Back', meetings_path %>
