@@ -29,6 +29,7 @@ class MeetingsController < ApplicationController
     @meeting.user_id = current_user.id
     respond_to do |format|
       if @meeting.save
+        @meeting.notificate_user
         format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
       else
@@ -43,6 +44,7 @@ class MeetingsController < ApplicationController
   def update
     respond_to do |format|
       if @meeting.update(meeting_params)
+        @meeting.notificate_user
         format.html { redirect_to @meeting, notice: 'Meeting was successfully updated.' }
         format.json { render :show, status: :ok, location: @meeting }
       else

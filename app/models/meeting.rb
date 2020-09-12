@@ -29,4 +29,10 @@ class Meeting < ApplicationRecord
     self.end_time.strftime("%-d/%-m/%y: %H:%M")
   end
 
+  def notificate_user
+    self.users.each do |u|
+      UserMailer.participation_notification(u,self).deliver_now
+    end
+  end
+
 end
