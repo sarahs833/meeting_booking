@@ -1,6 +1,7 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
   before_action :current_user, only: [:edit, :destroy]
+  before_action :current_user_meeting, only: [:edit,:update,:destroy]
 
   # GET /meetings
   # GET /meetings.json
@@ -65,6 +66,10 @@ class MeetingsController < ApplicationController
   end
 
   private
+
+    def current_user_meeting
+      redirect_to root_path, alert: "you do not have the right to edit this meeting" unless set_meeting.creator == current_user
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_meeting
       @meeting = Meeting.find(params[:id])
