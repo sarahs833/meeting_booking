@@ -7,20 +7,21 @@
 
 <p>
   <strong>Start time:</strong>
-  <%= @meeting.start_time %>
+  <%= @meeting.start_date_format %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @meeting.end_time %>
+  <%= @meeting.end_date_format %>
 </p>
 
 <p><%=meeting_participants(@meeting)%>
 
 
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
 
 <% if current_user.id == @meeting.creator.id %>
   <%=render partial:'shared/user' %>
 <%end%>
+
+<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
+<%= link_to 'Back', meetings_path %>

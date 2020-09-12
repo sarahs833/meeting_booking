@@ -6,7 +6,7 @@ class Meeting < ApplicationRecord
   validates :start_time, :end_time, :presence => true
   validate :start_time_can_not_be_in_the_past
   validate :end_time_should_be_after_start_time
-  attr_accessor :user_ids
+
 
 
   def start_time_can_not_be_in_the_past
