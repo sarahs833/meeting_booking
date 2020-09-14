@@ -2,8 +2,9 @@ fr:
   pages:
     home:
       welcome: 'Bonjour Meetings!'
-      banner_paragraph: 'We provide a clear board with all the schedule meetings and the member involve into the meeting.
+      banner_paragraph: 'Recevez un planning claire de vos rendez-vous et des membres participants.
 
 '
-      banner_catching_paragraph: 'Test it out and leave us your comments!.'
+      banner_catching_paragraph: 'Essayez et donnez laissez nous vos avis!'
+      create_meeting_button: 'Creer un rendez-vous!'
 

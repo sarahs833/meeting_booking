@@ -1,9 +1,9 @@
 <div class="jumbotron text-center">
   <h1 class="display-4"><%= t '.welcome' %></h1>
-  <p class="lead">We provide a clear board with all the schedule meetings and the member involve into the meeting.</p>
+  <p class="lead"><%= t '.banner_paragraph' %></p>
   <hr class="my-4">
-  <p>Test it out and leave us your comments!.</p>
-  <%=link_to 'Create meeting!',new_meeting_path, class:'btn btn-primary btn-lg' %>
+  <p><%= t '.banner_catching_paragraph' %></p>
+  <%=link_to t('.create_meeting_button'),new_meeting_path, class:'btn btn-primary btn-lg' %>
 </div>
 
 <div class="container">
