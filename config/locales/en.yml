@@ -30,4 +30,11 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  pages:
+    home:
+      welcome: 'Hello Meetings!'
+      banner_paragraph: 'We provide a clear board with all the schedule meetings and the member involve into the meeting.
+
+'
+      banner_catching_paragraph: 'Test it out and leave us your comments!.'
+

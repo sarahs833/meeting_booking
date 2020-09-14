@@ -26,6 +26,8 @@ gem 'devise'
 gem "simple_calendar", "~> 2.0"
 gem 'simple_form'
 
+gem 'rails-i18n'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
