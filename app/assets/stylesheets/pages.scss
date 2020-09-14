@@ -34,4 +34,44 @@ $latte_brown: #dfd3c3;
   border:solid white;
 }
 
+.simple-calendar {
+  th {
+    text-align:center;
+    background-color:#e94560;
+    color:white
+  }
 
+  tbody {
+    background-color:#16213e;
+    color:white
+  }
+  .day {}
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background-color:#ffc93c !important
+  }
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+    background-color:#16213e;
+  }
+  .next-month {
+    background-color:#16213e;
+  }
+  .current-month {}
+
+  .has-events {
+    background-color:#eb8f8f
+  }
+}
